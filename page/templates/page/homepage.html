@@ -1,0 +1,132 @@
+{% extends 'page/base.html' %}
+
+{% block content %}
+<div id="about" class="with_bground">
+<div class="overlay">
+<div class="container">
+<div style="text-align: center;">
+<!--<h1 class="header">WRZAWA</h1>-->
+<div><img style="width:60%;" src="/static/img/logos.png" alt="WRZAWA"></div>
+<h2 class="header">Kurs Drużynowych Wędrowniczych "Jak dobrze być barankiem"<br>Polska, Europa, Świat, 12-34.56.2017 </h2>
+</div>
+</div>
+</div>
+</div>
+
+<div id="idea" class="container without_bground">
+<div class="row">
+  <div class="col-md-8">
+<p>
+  <h2>Bycie drużynowym wędrowniczym to niemała sztuka!</h2>
+  Niedźwiedź jaskiniowy (Ursus spelaeus) – gatunek ssaka z rodziny niedźwiedziowatych
+  (Ursidae), zamieszkującego Europę w okresie plejstocenu ok. 300 tysięcy lat temu i
+   wymarłego pod koniec ostatniej epoki lodowcowej, ok. 28 tysięcy lat temu.
+
+  Zarówno polska nazwa niedźwiedź jaskiniowy, jak też łacińska Ursus spelaeus,
+  wiąże się z faktem, iż szczątki tych zwierząt znajdowano głównie w jaskiniach.
+</p>
+</div>
+<div class="col-md-4">
+<img src="/static/photos/wawa.jpg" alt="warszawa" class="round img-responsive">
+</div>
+</div>
+</div>
+
+<div id="program" class="container without_bground">
+<div class="row">
+  <div class="col-md-4">
+  <img src="/static/photos/work.jpg" alt="people working" class="round img-responsive">
+  </div>
+<div class="col-md-8">
+<h2>Program</h2>
+<p>
+Nad programem Kursu czuwają super-instruktorzy z różnych środowisk w Polsce.
+A także sami uczestnicy, bo przecież po co robić wszystko samemu jeśli można
+wykorzystać do tego kursantów i jeszcze czegoś ich przy tym nauczyć!
+</p>
+<div class="row">
+  <div class="col-md-6 col-centered">
+<ul style="list-style-type:none">
+<li>phm Krzysztof Widłak</li>
+<li>phm Niedźwiedź Jaskiniowy</li>
+<li>phm Wychuchol Pirenejski</li>
+<li>phm Pan To Felek</li></ul></div>
+
+</div>
+<a class="btn btn-default right" href="{% url 'program' %}" role="button">Czytaj więcej</a>
+</div>
+
+</div>
+</div>
+
+
+
+<div id="events" class="container without_bground">
+<div class="row">
+<div class="col-md-6">
+<h2>{{ latest.title }}</h2>
+<p>Opublikowano: {{ latest.published_date }}</p>
+<p>{{ latest.text|linebreaks }}</p>
+<br>
+<p>Autor: {{ latest.author }}</p>
+<a class="btn btn-default" href="{% url 'events' %}" role="button">Czytaj więcej</a>
+</div>
+<!--
+<div class="col-md-4">
+<img src="/static/photos/trekker.jpg" alt="girl walking" class="round img-responsive">
+</div>-->
+<div class="col-md-6">
+<h2>{{ last_but_one.title }}</h2>
+<p>Opublikowano: {{ last_but_one.published_date }}</p>
+<p>{{ last_but_one.text|linebreaks }}</p>
+<br>
+<p>Autor: {{ last_but_one.author }}</p>
+<a class="btn btn-default" href="{% url 'events' %}" role="button">Czytaj więcej</a>
+</div>
+</div>
+</div>
+
+
+<div id="signup" class="with_bground">
+<div class="overlay">
+<div class="container">
+<div style="text-align: left;">
+<h2 style="color:#ffffff;">Zapisy</h2>
+<p style="color:#ffffff;">Zapisy ruszają już niedługo!</p>
+<a class="btn btn-default" href="{% url 'signup' %}" role="button">Zapisz się</a>
+</div>
+</div>
+</div>
+</div>
+
+<div id="organizers" class="container without_bground">
+<div class="row">
+  <div class="col-md-6 col-centered">
+<h2>Organizatorzy</h2>
+<p>Komendant kursu: <br>
+Chcesz przeczytać więcej o organizatorach?</p>
+<a class="btn btn-default" href="{% url 'organizers' %}" role="button">Poznaj nas!</a>
+</div>
+
+</div>
+</div>
+
+<!--
+<div id="partners" class="container without_bground">
+<div>
+<h2>Nasi partnerzy</h2>
+<p>Dziękujemy Chorągwi Stołecznej ZHP i Szczepowi 321 WDHiGZ "Infinitas"!<br>
+<div class="row">
+<div class="col-md-3">
+<a href="http://www.stoleczna.zhp.pl" target="_blank">
+  <img src="/static/img/chorogiew.png" class="img-responsive"></a>
+</div>
+<div class="col-md-3">
+    <a href="http://321infinitas.weebly.com/" target="_blank">
+      <img src="/static/img/infinitas.jpg" class="img-responsive"></a>
+</div>
+</div>
+</div>
+</div>
+-->
+{% endblock %}
